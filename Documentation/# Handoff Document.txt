@@ -1,0 +1,53 @@
+# Handoff Document
+
+## Project
+
+Email-to-Quote AI Agent
+
+## Current Status
+
+Core quotation workflow is operational.
+
+The project can:
+
+- Read Outlook emails
+- Extract attachment contents
+- Understand RFQs using an LLM
+- Validate customers/products
+- Generate quotation PDFs
+- Route quotations through human approval
+- Generate customer email content using an LLM
+
+## Immediate Next Task
+
+Implement Outlook Draft generation.
+
+Workflow:
+
+Approved Quote
+      │
+      ▼
+Generate Email using Email Composer
+      │
+      ▼
+Create Outlook Draft
+      │
+      ▼
+Attach Generated PDF
+      │
+      ▼
+Sales Executive Reviews
+      │
+      ▼
+Send
+
+## Important Architectural Decisions
+
+- Outlook COM chosen over Microsoft Graph for prototyping due to tenant security restrictions.
+- AI assists with understanding and drafting but never sends customer communications automatically.
+- Business Central is currently mocked and designed for future API replacement.
+- LLM interactions are centralized through llm_client.py to support multiple AI modules.
+
+## Long-Term Vision
+
+Transform the prototype into a production-ready, agentic automation platform capable of handling multiple customer communication workflows beyond quotations, including order confirmations, invoice requests, support inquiries, and follow-up communications.

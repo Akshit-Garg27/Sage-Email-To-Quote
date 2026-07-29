@@ -1,0 +1,65 @@
+# Roadmap
+
+Phase 1
+
+Email Reading
+Completed
+
+---
+
+Phase 2
+
+Document Understanding
+Completed
+
+---
+
+Phase 3
+
+Business Validation
+Completed
+
+---
+
+Phase 4
+
+Quote Generation
+Completed
+
+---
+
+Phase 5
+
+Human Review
+Completed
+
+---
+
+Phase 6
+
+Email Composition
+Completed (Initial)
+
+---
+
+Phase 7
+
+Outlook Draft Generation
+Next
+
+---
+
+Phase 8
+
+Business Central Production APIs
+
+---
+
+Phase 9
+
+Production Readiness
+
+- Logging
+- Monitoring
+- Error handling
+- Packaging

@@ -1,0 +1,108 @@
+# Engineering Notes
+
+## Project Philosophy
+
+This project is not intended to be a simple LLM application. It is designed as an enterprise-grade, agentic workflow where AI performs repetitive cognitive tasks while humans retain authority over commercial decisions.
+
+The objective is to automate work, not decision-making.
+
+---
+
+## Architectural Principles
+
+Every module should have exactly one responsibility.
+
+Examples:
+
+- Outlook module only communicates with Outlook.
+- Document Reader only extracts text.
+- Classifier only extracts structured information.
+- Quote Generator only creates quotation objects.
+- Email Composer only generates customer-facing communication.
+
+Avoid combining responsibilities within the same module.
+
+---
+
+## AI Design Philosophy
+
+The LLM is treated as a specialized reasoning engine rather than a source of business truth.
+
+Business truth should always come from:
+
+- Business Central
+- ERP
+- Master Data
+- Human Approval
+
+Never rely on the LLM to invent commercial information.
+
+---
+
+## Human-in-the-Loop
+
+Human approval is intentionally placed after quotation generation.
+
+Reasons:
+
+- Commercial pricing remains a business decision.
+- AI should never automatically communicate prices to customers.
+- This mirrors enterprise approval workflows.
+
+---
+
+## Prompt Engineering
+
+Prompts should be stored separately from Python code.
+
+Python constructs context.
+
+Prompt files define behaviour.
+
+This separation allows prompt iteration without modifying application logic.
+
+---
+
+## Error Handling Philosophy
+
+The system should fail safely.
+
+Examples:
+
+Unknown customer
+→ Human Intervention
+
+Unknown product
+→ Human Intervention
+
+Low confidence
+→ Human Intervention
+
+OCR failure
+→ Human Intervention
+
+The AI should never guess.
+
+---
+
+## Future Design
+
+The architecture should remain modular enough that any of the following can be replaced independently:
+
+- LLM provider
+- OCR engine
+- Outlook integration
+- ERP integration
+- PDF generator
+
+No module should directly depend on implementation details of another.
+
+---
+
+## Coding Style
+
+- Keep functions focused.
+- Avoid long functions where possible.
+- Use descriptive variable names.
+- Prefer readability over clever code.
+- Keep business logic separate from infrastructure.

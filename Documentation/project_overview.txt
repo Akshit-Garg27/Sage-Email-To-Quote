@@ -1,0 +1,52 @@
+# Email-to-Quote AI Agent
+
+## Project Summary
+
+Email-to-Quote AI Agent is an agentic AI prototype being developed for Sage Publishing to automate the initial stages of customer quotation processing.
+
+The system monitors Outlook emails, extracts information from both the email body and attachments, validates customer and product information against Business Central (currently mocked), generates a professional quotation PDF, routes the quote through a mandatory human approval step, and finally prepares a customer-facing response.
+
+The project is designed as an enterprise workflow rather than a simple LLM application. AI assists with understanding documents and drafting responses, while humans remain responsible for approving commercial communications.
+
+---
+
+## Business Problem
+
+Sales teams spend significant time manually:
+
+- Reading quotation requests
+- Opening attachments
+- Extracting requested products
+- Validating customers
+- Looking up products
+- Preparing quotation documents
+- Writing response emails
+
+Many of these activities are repetitive and rule-based.
+
+The objective is to reduce manual effort while ensuring that all customer-facing communications remain under human control.
+
+---
+
+## Objectives
+
+Primary objectives:
+
+- Automate quotation request processing
+- Read Outlook emails automatically
+- Process multiple attachment formats
+- Extract structured business information using an LLM
+- Validate against Business Central
+- Generate professional quotations
+- Require human approval before customer communication
+- Prepare Outlook draft responses
+
+---
+
+## Guiding Principles
+
+- Human-in-the-loop architecture
+- AI assists but does not make commercial decisions
+- Modular agent-based design
+- Easy replacement of mock services with production APIs
+- Prompt-driven behaviour instead of hardcoded logic

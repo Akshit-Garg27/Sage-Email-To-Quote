@@ -1,0 +1,15 @@
+# Lessons Learned
+
+Microsoft Graph authentication was abandoned because enterprise security policies prevented Device Code Flow.
+
+Outlook COM is currently the most practical solution for local prototyping.
+
+OCR should be optional and only used for image-based documents.
+
+Prompt quality has a significant impact on extraction quality.
+
+Separating the LLM interface into llm_client.py simplifies future AI modules.
+
+Human approval should occur after quotation generation but before customer communication.
+
+Email composition should remain generic instead of quotation-specific to allow reuse for future workflows.

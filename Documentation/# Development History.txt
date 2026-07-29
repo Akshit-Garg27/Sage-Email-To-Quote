@@ -1,0 +1,106 @@
+# Development History
+
+## Phase 1
+
+Initially attempted Microsoft Graph API.
+
+Issue:
+
+Company tenant enforced Token Protection policies.
+
+Result:
+
+Device Code Flow could not access Outlook.
+
+Decision:
+
+Switch to Outlook COM.
+
+Reason:
+
+Runs locally under the logged-in Windows user and avoids authentication restrictions.
+
+---
+
+## Phase 2
+
+Built Outlook COM integration.
+
+Capabilities:
+
+- Read unread emails
+- Mark emails as read
+- Save attachments
+
+---
+
+## Phase 3
+
+Implemented document reading.
+
+Supported:
+
+- PDF
+- DOCX
+- Images (OCR)
+
+---
+
+## Phase 4
+
+Developed LLM-based email understanding.
+
+Extracts:
+
+- Intent
+- Organization
+- Contact Person
+- Products
+- Notes
+
+---
+
+## Phase 5
+
+Created mock Business Central.
+
+Validates:
+
+- Customers
+- Products
+
+---
+
+## Phase 6
+
+Built quotation generation.
+
+Produces:
+
+- Quote object
+- Pricing
+- Professional PDF
+
+---
+
+## Phase 7
+
+Introduced mandatory Human Quote Review.
+
+Purpose:
+
+Ensure AI cannot automatically send quotations.
+
+---
+
+## Phase 8
+
+Created Email Composer.
+
+Purpose:
+
+Generate customer-facing responses using the LLM instead of static templates.
+
+Current Status:
+
+Prompt refinement underway.

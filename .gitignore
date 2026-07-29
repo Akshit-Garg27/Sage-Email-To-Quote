@@ -1,0 +1,53 @@
+﻿# ============================================================
+# Email-to-Quote AI Agent — Git Ignore Rules
+# ============================================================
+
+# NEVER commit — contains secrets and credentials
+.env
+*.env
+.env.*
+!.env.example
+
+# Python virtual environment — recreate on each machine
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Generated quote PDFs
+quotes/*.pdf
+
+# Saved email attachments — not source code
+attachments/**
+!attachments/.gitkeep
+
+# Audit and run logs
+audit_log.txt
+logs/
+*.log
+
+# BC debug and test scripts
+bc_debug_overlap.py
+bc_effective_check.py
+bc_fix_discover.py
+bc_item_debug.py
+bc_odata_discover.py
+bc_price_test.py
+bc_quote_debug.py
+bc_pricing_options.py
+bc_inactive_inspect.py
+bc_title_master_discover.py
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/settings.json
+.idea/

@@ -1,0 +1,62 @@
+# System Architecture
+
+## High-Level Workflow
+
+Customer Email
+        │
+        ▼
+Outlook COM Integration
+        │
+        ▼
+Attachment Extraction
+        │
+        ▼
+Document Processing
+        │
+        ├── PDF Reader
+        ├── DOCX Reader
+        └── OCR (Images)
+        │
+        ▼
+LLM Email Understanding
+        │
+        ▼
+Business Central Validation
+        │
+        ▼
+Decision Engine
+        │
+        ▼
+Quote Generation
+        │
+        ▼
+Professional PDF Generation
+        │
+        ▼
+Human Quote Review
+        │
+        ▼
+LLM Email Composer
+        │
+        ▼
+Outlook Draft Generation
+        │
+        ▼
+Sales Executive Sends Email
+
+---
+
+## Architecture Philosophy
+
+The project is intentionally divided into independent modules.
+
+Each module performs exactly one responsibility.
+
+This allows individual modules to be replaced without affecting the rest of the system.
+
+Examples:
+
+- OCR engine can be replaced.
+- LLM model can be changed.
+- Business Central can move from mock data to production APIs.
+- Outlook COM can later be replaced with Microsoft Graph.

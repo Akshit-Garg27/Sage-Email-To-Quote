@@ -1,0 +1,66 @@
+# Agent Design
+
+## Outlook Agent
+
+Responsible for:
+
+- Reading Outlook emails
+- Saving attachments
+- Managing email state
+- Creating Outlook drafts
+
+---
+
+## Document Agent
+
+Responsible for:
+
+- Reading PDFs
+- Reading DOCX
+- OCR
+
+---
+
+## Classification Agent
+
+Responsible for:
+
+- Intent detection
+- Customer extraction
+- Product extraction
+- Missing information detection
+
+---
+
+## Validation Agent
+
+Responsible for:
+
+- Customer validation
+- Product validation
+
+---
+
+## Quote Agent
+
+Responsible for:
+
+- Creating quote objects
+- Pricing calculations
+- PDF generation
+
+---
+
+## Review Agent
+
+Responsible for:
+
+- Human approval
+
+---
+
+## Communication Agent
+
+Responsible for:
+
+- Generating customer-facing emails

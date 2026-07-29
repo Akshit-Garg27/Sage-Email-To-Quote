@@ -1,0 +1,79 @@
+# Known Limitations
+
+## Current Prototype
+
+The system currently uses:
+
+- Outlook COM
+- Mock Business Central
+- Local file storage
+- Local OCR
+
+This is intentional.
+
+---
+
+## Business Central
+
+Customer validation is mocked.
+
+Future implementation should replace mock_bc.py with Business Central APIs.
+
+---
+
+## Outlook
+
+Uses Outlook COM.
+
+Chosen because Microsoft Graph authentication was blocked by enterprise Token Protection policies.
+
+Future production version may migrate back to Graph.
+
+---
+
+## Quote Generation
+
+Current pricing is static.
+
+Future version should retrieve:
+
+- Customer-specific pricing
+- Discounts
+- Tax
+- Regional pricing
+
+---
+
+## Email Composer
+
+Prompt is still being refined.
+
+Future version should:
+
+- Adapt tone automatically.
+- Use customer history.
+- Support multiple workflow types.
+
+---
+
+## Human Review
+
+Currently console based.
+
+Future versions should use:
+
+- Streamlit
+- Internal Web Portal
+- Power Apps
+
+---
+
+## Logging
+
+Current logging is basic.
+
+Future implementation should support:
+
+- Centralized logging
+- Audit trails
+- Approval history
